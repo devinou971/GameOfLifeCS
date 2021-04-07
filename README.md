@@ -1,3 +1,5 @@
 # GameOfLifeCS
 
-C'est le projet que j'ai effectué en terminal SSI spécialité ISN
+This is a old school project, I am trying to make it into a WPF app.
+
+I will use this app to try some UI Designs.
