@@ -24,14 +24,14 @@ namespace GameOfLife
         private void pCouleurFond_Click(object sender, EventArgs e)
         {
             if (couleurFond.ShowDialog() == DialogResult.OK)
-                pCouleurFond.BackColor = couleurFond.Color;
+                pBackgroundColor.BackColor = couleurFond.Color;
         }
 
         private void pCouleurGrille_Click(object sender, EventArgs e)
         {
             if (couleurGrille.ShowDialog() == DialogResult.OK)
             {
-                pCouleurGrille.BackColor = couleurGrille.Color;
+                pGridColor.BackColor = couleurGrille.Color;
             }
                 
                 //pCouleurGrille.BackColor = Color.;
@@ -40,7 +40,7 @@ namespace GameOfLife
         private void pCouleurCellules_Click(object sender, EventArgs e)
         {
             if (couleurCellules.ShowDialog() == DialogResult.OK)
-                pCouleurCellules.BackColor = couleurCellules.Color;
+                pCellColor.BackColor = couleurCellules.Color;
         }
     }
 }

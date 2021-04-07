@@ -16,7 +16,7 @@ namespace GameOfLife
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Fen());
+            Application.Run(new Win());
         }
     }
 }

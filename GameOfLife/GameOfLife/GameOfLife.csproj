@@ -58,10 +58,9 @@
     <Compile Include="Principale.Designer.cs">
       <DependentUpon>Principale.cs</DependentUpon>
     </Compile>
-    <Compile Include="Grille.cs" />
+    <Compile Include="Grid.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Read.cs" />
     <EmbeddedResource Include="Options.resx">
       <DependentUpon>Options.cs</DependentUpon>
     </EmbeddedResource>

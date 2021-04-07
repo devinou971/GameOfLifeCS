@@ -1,6 +1,6 @@
 ﻿namespace GameOfLife
 {
-    partial class Fen
+    partial class Win
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -41,13 +41,13 @@
             this.refreshRateEntry = new System.Windows.Forms.TextBox();
             this.zoomBar = new System.Windows.Forms.TrackBar();
             this.menuBar = new System.Windows.Forms.MenuStrip();
-            this.fichiersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.enregistrerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ouvrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.filesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.couleursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aProposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.colorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gameOfLifeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.zoomBar)).BeginInit();
@@ -57,18 +57,20 @@
             // mainPanel
             // 
             this.mainPanel.BackColor = System.Drawing.SystemColors.Window;
-            this.mainPanel.Location = new System.Drawing.Point(0, 24);
+            this.mainPanel.Location = new System.Drawing.Point(0, 30);
+            this.mainPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(890, 380);
+            this.mainPanel.Size = new System.Drawing.Size(1187, 468);
             this.mainPanel.TabIndex = 0;
             this.mainPanel.Click += new System.EventHandler(this.panel1_Click);
             this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // playButton
             // 
-            this.playButton.Location = new System.Drawing.Point(37, 424);
+            this.playButton.Location = new System.Drawing.Point(49, 522);
+            this.playButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.playButton.Name = "playButton";
-            this.playButton.Size = new System.Drawing.Size(93, 33);
+            this.playButton.Size = new System.Drawing.Size(124, 41);
             this.playButton.TabIndex = 1;
             this.playButton.Text = "Play";
             this.playButton.UseVisualStyleBackColor = true;
@@ -76,9 +78,10 @@
             // 
             // stopButton
             // 
-            this.stopButton.Location = new System.Drawing.Point(162, 424);
+            this.stopButton.Location = new System.Drawing.Point(216, 522);
+            this.stopButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.stopButton.Name = "stopButton";
-            this.stopButton.Size = new System.Drawing.Size(104, 33);
+            this.stopButton.Size = new System.Drawing.Size(139, 41);
             this.stopButton.TabIndex = 2;
             this.stopButton.Text = "Stop";
             this.stopButton.UseVisualStyleBackColor = true;
@@ -86,9 +89,10 @@
             // 
             // resetButton
             // 
-            this.resetButton.Location = new System.Drawing.Point(304, 424);
+            this.resetButton.Location = new System.Drawing.Point(405, 522);
+            this.resetButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.resetButton.Name = "resetButton";
-            this.resetButton.Size = new System.Drawing.Size(84, 33);
+            this.resetButton.Size = new System.Drawing.Size(112, 41);
             this.resetButton.TabIndex = 3;
             this.resetButton.Text = "Reset";
             this.resetButton.UseVisualStyleBackColor = true;
@@ -96,9 +100,10 @@
             // 
             // nextButton
             // 
-            this.nextButton.Location = new System.Drawing.Point(415, 424);
+            this.nextButton.Location = new System.Drawing.Point(553, 522);
+            this.nextButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nextButton.Name = "nextButton";
-            this.nextButton.Size = new System.Drawing.Size(100, 33);
+            this.nextButton.Size = new System.Drawing.Size(133, 41);
             this.nextButton.TabIndex = 4;
             this.nextButton.Text = "Next Step";
             this.nextButton.UseVisualStyleBackColor = true;
@@ -107,17 +112,19 @@
             // genStaticLabel
             // 
             this.genStaticLabel.AutoSize = true;
-            this.genStaticLabel.Location = new System.Drawing.Point(537, 424);
+            this.genStaticLabel.Location = new System.Drawing.Point(716, 522);
+            this.genStaticLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.genStaticLabel.Name = "genStaticLabel";
-            this.genStaticLabel.Size = new System.Drawing.Size(33, 13);
+            this.genStaticLabel.Size = new System.Drawing.Size(43, 17);
             this.genStaticLabel.TabIndex = 5;
             this.genStaticLabel.Text = "Gen :";
             // 
             // genTextBox
             // 
-            this.genTextBox.Location = new System.Drawing.Point(573, 424);
+            this.genTextBox.Location = new System.Drawing.Point(764, 522);
+            this.genTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.genTextBox.Name = "genTextBox";
-            this.genTextBox.Size = new System.Drawing.Size(100, 20);
+            this.genTextBox.Size = new System.Drawing.Size(132, 22);
             this.genTextBox.TabIndex = 7;
             this.genTextBox.TextChanged += new System.EventHandler(this.genTextBox_TextChanged);
             // 
@@ -128,17 +135,19 @@
             // refreshRateLabel
             // 
             this.refreshRateLabel.AutoSize = true;
-            this.refreshRateLabel.Location = new System.Drawing.Point(693, 424);
+            this.refreshRateLabel.Location = new System.Drawing.Point(924, 522);
+            this.refreshRateLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.refreshRateLabel.Name = "refreshRateLabel";
-            this.refreshRateLabel.Size = new System.Drawing.Size(104, 13);
+            this.refreshRateLabel.Size = new System.Drawing.Size(142, 17);
             this.refreshRateLabel.TabIndex = 8;
             this.refreshRateLabel.Text = "Refresh rate (in ms) :";
             // 
             // refreshRateEntry
             // 
-            this.refreshRateEntry.Location = new System.Drawing.Point(801, 424);
+            this.refreshRateEntry.Location = new System.Drawing.Point(1068, 522);
+            this.refreshRateEntry.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.refreshRateEntry.Name = "refreshRateEntry";
-            this.refreshRateEntry.Size = new System.Drawing.Size(100, 20);
+            this.refreshRateEntry.Size = new System.Drawing.Size(132, 22);
             this.refreshRateEntry.TabIndex = 9;
             this.refreshRateEntry.Text = "10";
             this.refreshRateEntry.TextChanged += new System.EventHandler(this.refreshRateEntry_TextChanged);
@@ -146,102 +155,105 @@
             // zoomBar
             // 
             this.zoomBar.LargeChange = 1;
-            this.zoomBar.Location = new System.Drawing.Point(917, 24);
+            this.zoomBar.Location = new System.Drawing.Point(1223, 30);
+            this.zoomBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.zoomBar.Maximum = 25;
             this.zoomBar.Minimum = 5;
             this.zoomBar.Name = "zoomBar";
             this.zoomBar.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.zoomBar.Size = new System.Drawing.Size(45, 377);
+            this.zoomBar.Size = new System.Drawing.Size(56, 464);
             this.zoomBar.TabIndex = 10;
             this.zoomBar.Value = 10;
             this.zoomBar.Scroll += new System.EventHandler(this.zoomBar_Scroll);
             // 
             // menuBar
             // 
+            this.menuBar.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fichiersToolStripMenuItem,
+            this.filesToolStripMenuItem,
             this.optionsToolStripMenuItem,
-            this.aProposToolStripMenuItem});
+            this.aboutToolStripMenuItem});
             this.menuBar.Location = new System.Drawing.Point(0, 0);
             this.menuBar.Name = "menuBar";
-            this.menuBar.Size = new System.Drawing.Size(965, 24);
+            this.menuBar.Size = new System.Drawing.Size(1287, 28);
             this.menuBar.TabIndex = 11;
             this.menuBar.Text = "menuBar";
             // 
-            // fichiersToolStripMenuItem
+            // filesToolStripMenuItem
             // 
-            this.fichiersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.enregistrerToolStripMenuItem,
-            this.ouvrirToolStripMenuItem,
-            this.quitterToolStripMenuItem});
-            this.fichiersToolStripMenuItem.Name = "fichiersToolStripMenuItem";
-            this.fichiersToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
-            this.fichiersToolStripMenuItem.Text = "Fichiers";
+            this.filesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.saveToolStripMenuItem,
+            this.openToolStripMenuItem,
+            this.exitToolStripMenuItem});
+            this.filesToolStripMenuItem.Name = "filesToolStripMenuItem";
+            this.filesToolStripMenuItem.Size = new System.Drawing.Size(52, 24);
+            this.filesToolStripMenuItem.Text = "Files";
+            this.filesToolStripMenuItem.Click += new System.EventHandler(this.filesToolStripMenuItem_Click);
             // 
-            // enregistrerToolStripMenuItem
+            // saveToolStripMenuItem
             // 
-            this.enregistrerToolStripMenuItem.Name = "enregistrerToolStripMenuItem";
-            this.enregistrerToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
-            this.enregistrerToolStripMenuItem.Text = "Enregistrer";
-            this.enregistrerToolStripMenuItem.Click += new System.EventHandler(this.enregistrerToolStripMenuItem_Click);
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.saveToolStripMenuItem.Text = "Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
-            // ouvrirToolStripMenuItem
+            // openToolStripMenuItem
             // 
-            this.ouvrirToolStripMenuItem.Name = "ouvrirToolStripMenuItem";
-            this.ouvrirToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
-            this.ouvrirToolStripMenuItem.Text = "Ouvrir";
-            this.ouvrirToolStripMenuItem.Click += new System.EventHandler(this.ouvrirToolStripMenuItem_Click);
+            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.openToolStripMenuItem.Text = "Open";
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
-            // quitterToolStripMenuItem
+            // exitToolStripMenuItem
             // 
-            this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
-            this.quitterToolStripMenuItem.Text = "Quitter";
-            this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // optionsToolStripMenuItem
             // 
             this.optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.couleursToolStripMenuItem});
+            this.colorsToolStripMenuItem});
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
             this.optionsToolStripMenuItem.Text = "Options";
             // 
-            // couleursToolStripMenuItem
+            // colorsToolStripMenuItem
             // 
-            this.couleursToolStripMenuItem.Name = "couleursToolStripMenuItem";
-            this.couleursToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.couleursToolStripMenuItem.Text = "Couleurs";
-            this.couleursToolStripMenuItem.Click += new System.EventHandler(this.couleursToolStripMenuItem_Click);
+            this.colorsToolStripMenuItem.Name = "colorsToolStripMenuItem";
+            this.colorsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.colorsToolStripMenuItem.Text = "Colors";
+            this.colorsToolStripMenuItem.Click += new System.EventHandler(this.colorsToolStripMenuItem_Click);
             // 
-            // aProposToolStripMenuItem
+            // aboutToolStripMenuItem
             // 
-            this.aProposToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.helpToolStripMenuItem,
             this.gameOfLifeToolStripMenuItem});
-            this.aProposToolStripMenuItem.Name = "aProposToolStripMenuItem";
-            this.aProposToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
-            this.aProposToolStripMenuItem.Text = "A propos";
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
+            this.aboutToolStripMenuItem.Text = "About";
             // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
-            this.helpToolStripMenuItem.Text = "Aide";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.helpToolStripMenuItem.Text = "Help";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
             // gameOfLifeToolStripMenuItem
             // 
             this.gameOfLifeToolStripMenuItem.Name = "gameOfLifeToolStripMenuItem";
-            this.gameOfLifeToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.gameOfLifeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.gameOfLifeToolStripMenuItem.Text = "Game Of Life";
             this.gameOfLifeToolStripMenuItem.Click += new System.EventHandler(this.gameOfLifeToolStripMenuItem_Click);
             // 
-            // Fen
+            // Win
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(965, 474);
+            this.ClientSize = new System.Drawing.Size(1287, 583);
             this.Controls.Add(this.zoomBar);
             this.Controls.Add(this.refreshRateEntry);
             this.Controls.Add(this.refreshRateLabel);
@@ -254,9 +266,10 @@
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.menuBar);
             this.MainMenuStrip = this.menuBar;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Fen";
             this.Text = "Game Of Life";
-            this.Resize += new System.EventHandler(this.Fen_Resize);
+            //this.Resize += new System.EventHandler(this.Win_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.zoomBar)).EndInit();
             this.menuBar.ResumeLayout(false);
             this.menuBar.PerformLayout();
@@ -279,15 +292,15 @@
         private System.Windows.Forms.TextBox refreshRateEntry;
         private System.Windows.Forms.TrackBar zoomBar;
         private System.Windows.Forms.MenuStrip menuBar;
-        private System.Windows.Forms.ToolStripMenuItem fichiersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem enregistrerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ouvrirToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem filesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aProposToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gameOfLifeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem couleursToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem colorsToolStripMenuItem;
     }
 }
 

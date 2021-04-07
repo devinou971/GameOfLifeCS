@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace GameOfLife
 {
-    public partial class Fen : Form
+    public partial class Win : Form
     {
-        Grille grille;
+        Grid grid;
         Graphics g;
         Pen blackPen;
         SolidBrush sBruh;
 
-        public Fen()
+        public Win()
         {
             InitializeComponent();
 
@@ -29,14 +29,15 @@ namespace GameOfLife
             g = mainPanel.CreateGraphics();
             blackPen = new Pen(Color.Black);
             sBruh = new SolidBrush(Color.Black);
-            grille = new Grille(mainPanel.Height, mainPanel.Width, 10, g);
-            zoomBar.Value = grille.TailleCellule.Width;
+            grid = new Grid(mainPanel.Height, mainPanel.Width, 10, g);
+            MessageBox.Show("Grid : " + grid);
+            zoomBar.Value = grid.CellSize.Width;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
             
-            grille.DrawGrid();
+            grid.DrawGrid();
         }
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -46,18 +47,18 @@ namespace GameOfLife
                 case Keys.Right:
 
                     //MessageBox.Show("RIGHT");
-                    grille.GoRight();
+                    grid.GoRight();
                     return true;
                 case Keys.Left:
                     //MessageBox.Show("LEFT");
-                    grille.GoLeft();
+                    grid.GoLeft();
                     return true;
                 case Keys.Up:
-                    grille.GoUp();
+                    grid.GoUp();
                     //MessageBox.Show("UP");
                     return true;
                 case Keys.Down:
-                    grille.GoDown();
+                    grid.GoDown();
                     //MessageBox.Show("DOWN");
                     return true;
                 default: return base.ProcessCmdKey(ref msg, keyData);
@@ -69,27 +70,27 @@ namespace GameOfLife
         {
             System.Windows.Forms.MouseEventArgs eventSouris = (System.Windows.Forms.MouseEventArgs)e;
             genTextBox.Text = "0";
-            grille.Click(eventSouris.X, eventSouris.Y);
+            grid.Click(eventSouris.X, eventSouris.Y);
         }
 
         private void playButton_Click(object sender, EventArgs e)
         {
-            grille.Play();
+            grid.Play();
         }
 
         private void stopButton_Click(object sender, EventArgs e)
         {
-            grille.Stop();
+            grid.Stop();
         }
 
         private void resetButton_Click(object sender, EventArgs e)
         {
-            grille.Reset();
+            grid.Reset();
         }
 
         private void nextButton_Click(object sender, EventArgs e)
         {
-            grille.Update();
+            grid.Update();
         }
 
         private void genTextBox_TextChanged(object sender, EventArgs e)
@@ -99,11 +100,11 @@ namespace GameOfLife
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if(grille.Playing)
+            if(grid.Playing)
             {
-                grille.Update();
-                grille.Generation++;
-                genTextBox.Text = "" + grille.Generation;
+                grid.Update();
+                grid.Generation++;
+                genTextBox.Text = "" + grid.Generation;
             }
         }
 
@@ -126,24 +127,27 @@ namespace GameOfLife
 
         private void zoomBar_Scroll(object sender, EventArgs e)
         {
-            grille.Zoom(zoomBar.Value);
+            grid.Zoom(zoomBar.Value);
             
         }
-
-        private void Fen_Resize(object sender, EventArgs e)
+        
+        /*
+        private void Win_Resize(object sender, EventArgs e)
         {
-            MessageBox.Show("Size.Height : " + this.Size.Height + 
-                "\nmainPanel.Height : " + this.mainPanel.Height + 
-                "\ngrille.Hauteur : " + (this.Size.Height - this.mainPanel.Height - 150));
-            grille.Largeur += this.Size.Width - this.mainPanel.Width - (this.zoomBar.Width + 50);
-           
-            grille.Hauteur += this.Size.Height - this.mainPanel.Height - 150;
-            if (grille.Hauteur < 0)
-                grille.Hauteur = 0;
+            if(grid != null)
+            {
+                grid.Height += this.Size.Height - this.mainPanel.Height - 150;
+                if (grid.Height < 0)
+                    grid.Height = 0;
+
+                grid.Graphic = mainPanel.CreateGraphics();
+                grid.DrawGrid();
+            }
+            
 
             this.mainPanel.Width += this.Size.Width - this.mainPanel.Width - (this.zoomBar.Width + 50);
             this.mainPanel.Height += this.Size.Height - this.mainPanel.Height - 150;
-            grille.Graphic = mainPanel.CreateGraphics();
+            
 
 
             this.zoomBar.Location = new Point(this.mainPanel.Width + 40, 40);
@@ -156,21 +160,21 @@ namespace GameOfLife
             this.refreshRateLabel.Location = new Point(this.refreshRateLabel.Location.X, this.mainPanel.Height + 40);
             this.refreshRateEntry.Location = new Point(this.refreshRateEntry.Location.X, this.mainPanel.Height + 40);
 
-            grille.DrawGrid();
+            
             
         }
-
-        private void enregistrerToolStripMenuItem_Click(object sender, EventArgs e)
+        */
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Cette fonction n'est pas encore disponible");
+            MessageBox.Show("Not Implemented yet");
         }
 
-        private void ouvrirToolStripMenuItem_Click(object sender, EventArgs e)
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Cette fonction n'est pas encore disponible");
+            MessageBox.Show("Not Implemented yet");
         }
 
-        private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
@@ -182,10 +186,10 @@ namespace GameOfLife
 
         private void gameOfLifeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Créé par Damien DASSEUX 08/03/20");
+            MessageBox.Show("Created by Devinou971");
         }
 
-        private void couleursToolStripMenuItem_Click(object sender, EventArgs e)
+        private void colorsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form options = new Options();
 
@@ -193,6 +197,11 @@ namespace GameOfLife
             //options.Modal();
 
             //Application.Run(new Options());
+        }
+
+        private void filesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
