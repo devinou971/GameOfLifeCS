@@ -19,3 +19,15 @@ C:\Users\Damien\Documents\Programmation\C#\GameOfLifeCS\GameOfLife\GameOfLife\ob
 C:\Users\Damien\Documents\Programmation\C#\GameOfLifeCS\GameOfLife\GameOfLife\obj\Debug\GameOfLife.exe
 C:\Users\Damien\Documents\Programmation\C#\GameOfLifeCS\GameOfLife\GameOfLife\obj\Debug\GameOfLife.pdb
 C:\Users\Damien\Documents\Programmation\C#\GameOfLifeCS\GameOfLife\GameOfLife\obj\Debug\GameOfLife.Win.resources
+C:\Users\Damien\Desktop\temp\GameOfLifeCS\GameOfLife\GameOfLife\bin\Debug\GameOfLife.exe.config
+C:\Users\Damien\Desktop\temp\GameOfLifeCS\GameOfLife\GameOfLife\bin\Debug\GameOfLife.exe
+C:\Users\Damien\Desktop\temp\GameOfLifeCS\GameOfLife\GameOfLife\bin\Debug\GameOfLife.pdb
+C:\Users\Damien\Desktop\temp\GameOfLifeCS\GameOfLife\GameOfLife\obj\Debug\GameOfLife.csproj.AssemblyReference.cache
+C:\Users\Damien\Desktop\temp\GameOfLifeCS\GameOfLife\GameOfLife\obj\Debug\GameOfLife.csproj.SuggestedBindingRedirects.cache
+C:\Users\Damien\Desktop\temp\GameOfLifeCS\GameOfLife\GameOfLife\obj\Debug\GameOfLife.Options.resources
+C:\Users\Damien\Desktop\temp\GameOfLifeCS\GameOfLife\GameOfLife\obj\Debug\GameOfLife.Win.resources
+C:\Users\Damien\Desktop\temp\GameOfLifeCS\GameOfLife\GameOfLife\obj\Debug\GameOfLife.Properties.Resources.resources
+C:\Users\Damien\Desktop\temp\GameOfLifeCS\GameOfLife\GameOfLife\obj\Debug\GameOfLife.csproj.GenerateResource.cache
+C:\Users\Damien\Desktop\temp\GameOfLifeCS\GameOfLife\GameOfLife\obj\Debug\GameOfLife.csproj.CoreCompileInputs.cache
+C:\Users\Damien\Desktop\temp\GameOfLifeCS\GameOfLife\GameOfLife\obj\Debug\GameOfLife.exe
+C:\Users\Damien\Desktop\temp\GameOfLifeCS\GameOfLife\GameOfLife\obj\Debug\GameOfLife.pdb

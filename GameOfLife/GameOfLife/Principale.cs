@@ -30,7 +30,6 @@ namespace GameOfLife
             blackPen = new Pen(Color.Black);
             sBruh = new SolidBrush(Color.Black);
             grid = new Grid(mainPanel.Height, mainPanel.Width, 10, g);
-            MessageBox.Show("Grid : " + grid);
             zoomBar.Value = grid.CellSize.Width;
         }
 
