@@ -11,7 +11,7 @@ namespace GameOfLife
 
     class Grid
     {
-        private List<Point> cells = new List<Point>();
+        private HashSet<Point> cells = new HashSet<Point>();
         private Size cellSize; // 10 px
         private int height;
         private int width;
@@ -60,7 +60,7 @@ namespace GameOfLife
             this.sBrush = new SolidBrush(penColor);
             this.Eraser = new SolidBrush(backgroundColor);
 
-            this.Cells = new List<Point>();
+            this.Cells = new HashSet<Point>();
             this.Playing = false;
 
             this.NbColumns = this.Width / this.CellSize.Width;
@@ -189,7 +189,7 @@ namespace GameOfLife
         /// </summary>
         public void Update()
         {
-            List<Point> newCells = new List<Point>(this.Cells);
+            HashSet<Point> newCells = new HashSet<Point>(this.Cells);
 
             foreach(Point cell in this.Cells)
             {
@@ -293,7 +293,7 @@ namespace GameOfLife
                 }
 
             }
-            this.Cells = new List<Point>(newCells);
+            this.Cells = new HashSet<Point>(newCells);
         }
 
 
@@ -352,7 +352,7 @@ namespace GameOfLife
         public void Reset()
         {
             this.EraseAllCells();
-            this.Cells = new List<Point>();
+            this.Cells = new HashSet<Point>();
             this.Displacement = new Point(0, 0);
         }
 
@@ -390,7 +390,7 @@ namespace GameOfLife
             this.DrawAllCells();
         }
 
-        public List<Point> Cells
+        public HashSet<Point> Cells
         {
             get
             {
